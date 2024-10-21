@@ -10,23 +10,15 @@ import SwiftData
 
 @main
 struct ViewWeatherForecastApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-
+    @StateObject private var viewModel = CalendarViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if viewModel.weeklySums.isEmpty {
+                Text("Loading weather data...")
+            } else {
+                CalendarView(weeklySums: viewModel.weeklySums)
+            }
         }
-        .modelContainer(sharedModelContainer)
     }
 }

@@ -29,9 +29,30 @@
 		902B81AC2CBCEEAE00A829B5 /* ViewWeatherForecastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewWeatherForecastUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		902B81CE2CBCF27700A829B5 /* Exceptions for "ViewWeatherForecast" folder in "ViewWeatherForecastTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				CalendarView.swift,
+			);
+			target = 902B81A12CBCEEAE00A829B5 /* ViewWeatherForecastTests */;
+		};
+		902B81CF2CBCF27700A829B5 /* Exceptions for "ViewWeatherForecast" folder in "ViewWeatherForecastUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				CalendarView.swift,
+			);
+			target = 902B81AB2CBCEEAE00A829B5 /* ViewWeatherForecastUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		902B81922CBCEEAD00A829B5 /* ViewWeatherForecast */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				902B81CE2CBCF27700A829B5 /* Exceptions for "ViewWeatherForecast" folder in "ViewWeatherForecastTests" target */,
+				902B81CF2CBCF27700A829B5 /* Exceptions for "ViewWeatherForecast" folder in "ViewWeatherForecastUITests" target */,
+			);
 			path = ViewWeatherForecast;
 			sourceTree = "<group>";
 		};
